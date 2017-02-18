@@ -1,0 +1,28 @@
+{
+  "name": "funktion",
+  "version": "1.0.0",
+  "description": "Simple microservice built using GCP Cloud Function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adilsoncarvalho/funktion.git"
+  },
+  "keywords": [
+    "gcp",
+    "nodejs",
+    "microservice",
+    "cloud-function"
+  ],
+  "author": "Adilson Carvalho <lc.adilson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adilsoncarvalho/funktion/issues"
+  },
+  "homepage": "https://github.com/adilsoncarvalho/funktion#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
