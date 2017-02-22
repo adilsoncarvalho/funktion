@@ -9,7 +9,7 @@ I've used Apache Benchmark.
 ### Request
 
 ```
-ab -n 500000 -c 1000 -g teste.log https://us-central1-steady-eagle.cloudfunctions.net/funktion/
+ab -n 500000 -c 1000 -g output.tsv https://us-central1-steady-eagle.cloudfunctions.net/funktion/
 ```
 
 ### Results
@@ -51,3 +51,5 @@ Percentage of the requests served within a certain time (ms)
   99%    435
  100%    766 (longest request)
 ```
+
+> How to analize the `output.tsv` file: http://www.bradlanders.com/2013/04/15/apache-bench-and-gnuplot-youre-probably-doing-it-wrong/
