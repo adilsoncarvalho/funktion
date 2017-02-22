@@ -4,7 +4,8 @@
   "description": "Simple microservice built using GCP Cloud Function",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "function-deploy": "gcloud alpha functions deploy funktion --stage-bucket $FUNKTION_BUCKET --trigger-http --include-node-modules"
   },
   "repository": {
     "type": "git",
