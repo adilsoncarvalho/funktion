@@ -2,7 +2,25 @@
 
 Simple microservice built using GCP Cloud Function
 
-## Benchmarkin
+## Development environment
+
+It's development environment runs on top of Docker and to get it up and running you must build it
+
+    docker build -t funktion .
+
+Then you can run the server
+
+    docker run --rm -v "$(PWD):/app" -p "5000:5000" funktion
+
+> By using the `-v` option we mount our filesystem, so any change you make on the code will be reloaded by [nodemon](https://nodemon.io)
+
+If you need to access `bash`, `npm`, etc. you can just lunch a container as follows
+
+    docker run --rm -v "$(PWD):/app" -p "5000:5000" -ti funktion [bash|npm|etc.]
+
+> You can remove the `-v` if you don't want to change the source files on your machine or the `-p` if you are not willing to connect to the container
+
+## Benchmark
 
 I've used Apache Benchmark.
 
@@ -15,7 +33,7 @@ ab -n 500000 -c 1000 -g output.tsv https://us-central1-steady-eagle.cloudfunctio
 ### Results
 
 ```
-Server Software:        
+Server Software:
 Server Hostname:        us-central1-steady-eagle.cloudfunctions.net
 Server Port:            443
 
