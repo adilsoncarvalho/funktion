@@ -6,19 +6,24 @@ Simple microservice built using GCP Cloud Function
 
 It's development environment runs on top of Docker and to get it up and running you must build it
 
-    docker build -t funktion .
+    docker-compose build
 
 Then you can run the server
 
-    docker run --rm -v "$(PWD):/app" -p "5000:5000" funktion
-
-> By using the `-v` option we mount our filesystem, so any change you make on the code will be reloaded by [nodemon](https://nodemon.io)
+    docker-compose run --rm funktion
 
 If you need to access `bash`, `npm`, etc. you can just lunch a container as follows
 
-    docker run --rm -v "$(PWD):/app" -p "5000:5000" -ti funktion [bash|npm|etc.]
+    docker-compose run --rm funktion [bash|npm|etc.]
 
-> You can remove the `-v` if you don't want to change the source files on your machine or the `-p` if you are not willing to connect to the container
+## Consuming
+
+Consider using some tool like [httpie](https://httpie.org)
+
+    http localhost:5000/funktion
+    http localhost:5000/funktion/user
+    http localhost:5000/funktion/user/1
+    http POST localhost:5000/funktion/user/1 name="John Doe"
 
 ## Benchmark
 
