@@ -1,5 +1,7 @@
 # funktion
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adilsoncarvalho/funktion.svg)](https://greenkeeper.io/)
+
 Simple microservice built using GCP Cloud Function
 
 ## Development environment
